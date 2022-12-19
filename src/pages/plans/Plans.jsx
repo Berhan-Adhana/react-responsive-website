@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../../common/Header.jsx";
 import { plans } from "../../data.js";
 import PlansImg from "../../images/header_bg_3.jpg";
@@ -13,9 +14,9 @@ const Plans = () => {
         {plans.map((plan, index) => {
           return (
             <div className="card card__container" key={index}>
-              <h2 className="card__title">{plan.name}</h2>
+              <h2 className="plan__title">{plan.name}</h2>
               <p className="plan__desc">{plan.desc}</p>
-              <p className="plan__price">{plan.price}</p>
+              <p className="plan__price">${plan.price}<small>/mo</small></p>
               <h3 className="plan__features">Features</h3>
               <ul className="list list-column">
                 {plan.features.map((feature, index) => {
@@ -32,6 +33,7 @@ const Plans = () => {
                   );
                 })}
               </ul>
+              <Link className="btn btn-primary">Choose Plan</Link>
             </div>
           );
         })}

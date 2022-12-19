@@ -3,7 +3,7 @@ import "./trainers.css";
 import TrainerImg from "../../images/header_bg_4.jpg";
 import Header from "../../common/Header";
 import { trainers } from "../../data";
-import { Link }  from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
@@ -12,7 +12,7 @@ const Trainers = () => {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, omnis? Deserunt eaque obcaecati animi. Architecto nesciunt ratione repudiandae dolores esse repellendus in recusandae fuga harum quam nulla neque, quis voluptates.";
   return (
     <>
-      <Header img={TrainerImg} text={trainersText} title="Our Plans" />
+      <Header img={TrainerImg} text={trainersText} title="Our Trainers" />
       <div className="container trainers__container section">
         {trainers.map((trainer, index) => {
           return (

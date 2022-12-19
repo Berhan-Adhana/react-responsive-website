@@ -3,10 +3,25 @@
   grid-template-columns: 1fr;
   place-items: center;
   row-gap: var(--grid-gap);
+  color: var(--white-color);
 }
 
 .feature__not-available {
   text-decoration: line-through;
+  color: var(--gray-color-200);
+}
+.plan__price {
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.plan__price small {
+  font-size: 2rem;
+  color: var(--gray-color-300);
+}
+
+.plan__features {
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
