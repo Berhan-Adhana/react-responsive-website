@@ -1,0 +1,45 @@
+.about__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  row-gap: 2rem;
+}
+.about__our-story,
+.about__our-vision,
+.about__our-mission {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--grid-gap);
+  justify-content: center;
+  align-items: center;
+}
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--grid-gap);
+  justify-content: center;
+  align-items: center;
+}
+.about__img {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: skewX(15deg);
+  transition: var(--transition);
+}
+
+.about__img:hover {
+  transform: none;
+}
+
+@media screen and (min-width: 768px) {
+  .about__content {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--grid-gap);
+  }
+  .about__img {
+    width: 40rem;
+    height: 40rem;
+  }
+}

@@ -1,0 +1,35 @@
+.trainers__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--grid-gap);
+  /* place-items: center; */
+  justify-content: center;
+  align-items: center;
+}
+
+.trainer__img {
+  border-radius: var(--card-border-radius);
+}
+.trainer__name {
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .trainers__container {
+    grid-template-columns: repeat(2, 300px);
+    gap: var(--grid-gap);
+  }
+  .trainer__img-wrapper {
+    width: 20rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .trainers__container {
+    grid-template-columns: repeat(3, 300px);
+    gap: var(--grid-gap);
+  }
+  .trainer__img-wrapper {
+    width: 20rem;
+  }
+}

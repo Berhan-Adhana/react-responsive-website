@@ -1,0 +1,7 @@
+.contact__container{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    column-gap: var(--grid-gap);
+
+}
