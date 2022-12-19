@@ -12,7 +12,7 @@ const Plans = () => {
       <div className="container plans__container section">
         {plans.map((plan, index) => {
           return (
-            <div className="card card__container">
+            <div className="card card__container" key={index}>
               <h2 className="card__title">{plan.name}</h2>
               <p className="plan__desc">{plan.desc}</p>
               <p className="plan__price">{plan.price}</p>
@@ -26,7 +26,7 @@ const Plans = () => {
                           ? "feature__available list__item"
                           : "list__item feature__not-available"
                       }
-                    >
+                    key={index}>
                       {feature.feature}
                     </li>
                   );

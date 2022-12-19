@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
@@ -6,6 +6,21 @@ import Logo from "../images/logo.png";
 import { links } from "../data";
 const Navbar = (props) => {
   const [open, setOpen] = useState(false);
+
+  // closes the side menu when clicked outside the menubar
+  const handleOutsideClick = () => {
+    const html = window.document.documentElement;
+    html.addEventListener("click", (event) => {
+      if (event.target.classList.value !== "nav__menu-btn" && open) {
+        setOpen(false);
+      }
+    });
+  };
+
+  useEffect(() => {
+    handleOutsideClick();
+  });
+
   return (
     <header id="header">
       <nav id="nav" className="nav container">
